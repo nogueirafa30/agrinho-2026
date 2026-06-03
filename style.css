@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(175, 250, 169);
+}
+
+header{
+    background-color: rgb(30, 110, 77);
+}
+
+#agro.webp{
+    width: 300PX;
+}
+
+.paragrafo{
+    text-aling: center;
+    padding: 50px;
+    font-size:20px;
+}
