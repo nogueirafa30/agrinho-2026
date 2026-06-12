@@ -1,17 +1,171 @@
-body{
-    background-color: rgb(175, 250, 169);
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header{
-    background-color: rgb(30, 110, 77);
+body {
+    background-color: #f4f7f4;
+    color: #333;
+    line-height: 1.6;
 }
 
-#agro.webp{
-    width: 300PX;
+/* Cabeçalho */
+header {
+    background-color: #2e6f40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #1e4629;
 }
 
-.paragrafo{
-    text-aling: center;
-    padding: 50px;
-    font-size:20px;
+.logo-container img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+/* Conteúdo Principal */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.introducao {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    border-left: 5px solid #2e6f40;
+}
+
+.introducao h2 {
+    color: #2e6f40;
+    margin-bottom: 10px;
+}
+
+/* Seção de Cards (Pilares) */
+.pilares h2 {
+    color: #1e4629;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: white;
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #8b5a2b; /* Tom terra para os títulos dos cards */
+    margin-bottom: 10px;
+}
+
+
+.quiz-container {
+    background-color: #e8f5e9; /* Verde bem claro para destacar o fundo do quiz */
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+    border: 2px dashed #2e6f40; /* Borda tracejada verde */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.quiz-container h2 {
+    color: #1e4629;
+    margin-bottom: 10px;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quiz-options button {
+    background-color: white;
+    border: 2px solid #2e6f40; /* Borda com o verde padrão */
+    color: #2e6f40;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+/* Efeito ao passar o mouse nos botões ativos */
+.quiz-options button:hover:not(:disabled) {
+    background-color: #2e6f40;
+    color: white;
+    transform: scale(1.02);
+}
+
+/* Estilo para quando os botões forem desativados após a resposta */
+.quiz-options button:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Mensagem de resultado (Acerto ou Erro) */
+.resultado {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.correto {
+    color: #1e4629;
+    background-color: #c8e6c9; /* Fundo verde claro para acerto */
+}
+
+.errado {
+    color: #c62828;
+    background-color: #ffcdd2; /* Fundo vermelho claro para erro */
+}
+
+/* ======================================================= */
+
+/* Rodapé */
+footer {
+    background-color: #1e4629;
+    color: #b3d1b9;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    margin-top: 40px;
 }

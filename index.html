@@ -4,73 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrinho</title>
+    <title>Projeto Agrinho</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <div> 
-            <img id="img-agro.webp" src="agro.webp" alt="agro">
+        <div class="logo-container">
+            <img id="agro" src="agro.webp" alt="Agrinho">
         </div>
         <h1>Agro Forte, Futuro Sustentável</h1>
     </header>
+
+    <main>
+        <section class="introducao">
+            <h2>O Poder do Campo com Consciência</h2>
+            <p>O <strong>Projeto Agrinho</strong> incentiva a criatividade e o conhecimento sobre a importância do agronegócio aliado à preservação ambiental. Ser "Agro Forte" significa produzir alimentos para o mundo enquanto cuidamos da nossa terra.</p>
+        </section>
+
+        <section class="pilares">
+            <h2>Pilares do Futuro Sustentável</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Tecnologia no Campo</h3>
+                    <p>Uso de drones, sensores e inteligência artificial para otimizar o plantio e evitar o desperdício de água e insumos.</p>
+                </div>
+                <div class="card">
+                    <h3>Preservação</h3>
+                    <p>Práticas de rotação de culturas e plantio direto que protegem o solo e mantêm as florestas nativas vivas.</p>
+                </div>
+                <div class="card">
+                    <h3>Educação</h3>
+                    <p>Levar o conhecimento do campo para as escolas, mostrando que a sustentabilidade começa desde cedo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="quiz-container">
+            <h2>Desafio Agro Sustentável 🌾</h2>
+            <p id="pergunta">Qual dessas técnicas de irrigação economiza mais água no campo?</p>
+            
+            <div class="quiz-options">
+                <button onclick="verificarResposta(false, this)">Irrigação por Aspersão Comum</button>
+                <button onclick="verificarResposta(true, this)">Irrigação por Gotejamento (Direto na raiz)</button>
+                <button onclick="verificarResposta(false, this)">Alagamento de Sulcos</button>
+            </div>
+
+            <p id="quiz-resultado" class="resultado"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Projeto Agrinho. Todos os direitos reservados ao futuro do nosso planeta.</p>
+    </footer>
+
+    <script>
+        function verificarResposta(eCorreto, botaoClicado) {
+            const resultadoTexto = document.getElementById("quiz-resultado");
+            const botoes = document.querySelectorAll(".quiz-options button");
+
+            // Desabilita todos os botões após o clique para o usuário não clicar de novo
+            botoes.forEach(btn => btn.disabled = true);
+
+            if (eCorreto) {
+                resultadoTexto.innerText = "🌱 Parabéns! O gotejamento leva a água direto para a raiz da planta, reduzindo a evaporação em até 90%.";
+                resultadoTexto.className = "resultado correto";
+                botaoClicado.style.backgroundColor = "#2e6f40";
+                botaoClicado.style.color = "white";
+            } else {
+                resultadoTexto.innerText = "❌ Quase lá! Essa técnica ainda desperdiça muita água por evaporação. O correto seria o Gotejamento.";
+                resultadoTexto.className = "resultado errado";
+                botaoClicado.style.backgroundColor = "#d32f2f";
+                botaoClicado.style.color = "white";
+            }
+        }
+    </script>
 </body>
-<main>
-    <div>
-        <h2>Agro Forte</h2>
-        <p>Significa ter uma agricultura e pecuária modernas, eficientes e capazes de produzir em grande quantidade.
-            Hoje, a força do agro não vem da força física, mas sim da tecnologia:
-            Drones e Satélites: Monitoram a saúde das plantas e encontram pragas antes que elas se espalhem.
-            Agricultura de Precisão: Máquinas inteligentes aplicam água e nutrientes na quantidade exata, evitando
-            desperdícios.
-            Segurança Alimentar: Garantia de que a comida vai chegar com qualidade na mesa de todas as famílias.
-        </p>
-    </div>
-
-    <div>
-        <h2>Futuro Sustentável</h2>
-        <p>É a certeza de que os recursos naturais (como a água e o solo) estarão disponíveis para as próximas gerações.
-            Uma agricultura sustentável foca em:
-            Preservação da Água: Proteger as nascentes e rios que cruzam as propriedades rurais.
-            Saúde do Solo: Cuidar da terra para que ela não perca seus nutrientes e continue fértil por muitos
-            anos.
-            Combate ao Desmatamento Ilegal: Separar quem produz de forma correta e segue a lei daqueles que
-            destroem o meio ambiente.</p>
-    </div>
-    <div>
-        <h2>O Agro Sustentável na Prática (O Exemplo do Paraná)</h2>
-        <p>O nosso estado é um exemplo de como a ciência ajuda o campo a ser sustentável através de três grandes
-            técnicas:
-
-            1. Plantio Direto: A palha da colheita antiga fica no chão como um "cobertor". Isso protege a terra da
-            chuva (evitando a erosão) e mantém o solo úmido.
-            2. ILPF (Integração Lavoura-Pecuária-Floresta): O agricultor planta grãos, cria gado e planta árvores no
-            mesmo terreno. As árvores dão sombra para os animais e limpam o ar de gases poluentes.
-            3. Bioinsumos: Uso de "insetos do bem", fungos e bactérias naturais para combater pragas, diminuindo o
-            uso de produtos químicos pesados.</p>
-    </div>
-</main>
-<footer>
-    <div>
-        <h3>links uteis</h3>
-        <ul>
-            <li><a href="https://maisagro.syngenta.com.br/sustentabilidade/agricultura-sustentavel/">
-                        <img src="" alt="Ícone de site">
-                    </a></li>
-
-                <li><a href="https://maisagro.syngenta.com.br/sustentabilidade/agricultura-sustentavel/">
-                        <img src="" alt="Ícone de site">
-                    </a></li>
-
-                <li><a href="https://maisagro.syngenta.com.br/sustentabilidade/agricultura-sustentavel/">
-                        <img src="" alt="Ícone de site">
-                    </a></li>
-
-        </ul>
-    </div>
-    <p>Endereço do meu site, 415</p>
-        <p>Todos os direitos reservados ®</p>
-</footer>
 
 </html>
